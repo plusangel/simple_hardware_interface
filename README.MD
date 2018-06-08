@@ -1,0 +1,34 @@
+# hardware interface for sonar
+
+## IOs
+
+It reads input from topic "sonar_velocity" to forward it as PWM value (format: Int16)
+It publishes to topic "encoder" the encoder ticks (format: Float32)
+
+## Execution
+
+Please use:
+
+'''
+roslaunch hardware_interface_sonar hardware_interface.launch
+'''
+
+## Tests
+We can the test_publisher to send a continues steam of velocity data.
+'''
+rosrun hardware_interface_sonar test_blisher
+'''
+In case that we want a constant number please edit accordingly.
+
+
+## Comments
+
+The board is assumed to be found on /dev/ttyACM0. In different case just edit the config file.
+Communication runs at 10Hz (100ms intervals).
+
+For further changes please talk to author.
+
+## Athor
+
+Angelos Plastropoulos (angelos.plastropoulos@innotecuk.com)
+
