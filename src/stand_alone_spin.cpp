@@ -1,7 +1,7 @@
 #include "arduinoSerial.h"
 
 int main() {
-  Arduino my_arduino("/dev/ttyUSB0", 9600);
+  Arduino my_arduino("/dev/ttyUSB0", 115200);
   float encoder;
 
   while(1) {
@@ -13,7 +13,7 @@ int main() {
     my_arduino.send_to_mc(v);
     
     // 20ms wait time (=50Hz)
-    usleep(1000000);
+    usleep(100000);
     
     encoder = my_arduino.read_from_mc();
     printf("encoder = %f\n", encoder);

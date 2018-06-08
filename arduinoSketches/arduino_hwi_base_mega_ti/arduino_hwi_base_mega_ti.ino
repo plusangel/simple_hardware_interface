@@ -28,8 +28,8 @@ bool sw = true;
 void setup()                    
 {
   // begin serial
-  Serial2.begin(9600);          
-  Serial.begin(9600); 
+  Serial1.begin(115200);          
+  Serial.begin(115200); 
   
   // initialisation
   hub.startMark = '<';
@@ -43,7 +43,7 @@ void setup()
   TCCR1B = 0;// same for TCCR1B
   TCNT1  = 0;//initialize counter value to 0
   // set compare match register for 1hz increments
-  OCR1A = 15624;// = (16*10^6) / (1*1024) - 1 (must be <65536)
+  OCR1A = 1562;// = (16*10^6) / (1*1024) - 1 (must be <65536)
   // turn on CTC mode
   TCCR1B |= (1 << WGM12);
   // Set CS12 and CS10 bits for 1024 prescaler
@@ -94,8 +94,8 @@ void data_send()
   
   memcpy(pBuffer, &hub, uBufSize);
   for(int i = 0; i<uBufSize;i ++) {
-   Serial2.print(pBuffer[i]);
-   Serial2.flush();
+   Serial1.print(pBuffer[i]);
+   Serial1.flush();
   }
   
 
@@ -125,8 +125,8 @@ void data_receive()
 
   //Serial1USB.println("Debug: Intro");
 
-  while (Serial2.available() > 0 && newData == false) {
-    rc = Serial2.read();
+  while (Serial1.available() > 0 && newData == false) {
+    rc = Serial1.read();
 
     //Serial1USB.println("Debug: Receive bytes");
     
