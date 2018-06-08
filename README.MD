@@ -2,22 +2,22 @@
 
 ## IOs
 
-It reads input from topic "sonar_velocity" to forward it as PWM value (format: Int16)
-It publishes to topic "encoder" the encoder ticks (format: Float32)
+It reads input from topic **"sonar_velocity"** to forward it as PWM value (format: Int16)
+It publishes to topic **"encoder"** the encoder ticks (format: Float32)
 
 ## Execution
 
 Please use:
 
-'''
+```
 roslaunch hardware_interface_sonar hardware_interface.launch
-'''
+```
 
 ## Tests
 We can the test_publisher to send a continues steam of velocity data.
-'''
+```
 rosrun hardware_interface_sonar test_blisher
-'''
+```
 In case that we want a constant number please edit accordingly.
 
 
