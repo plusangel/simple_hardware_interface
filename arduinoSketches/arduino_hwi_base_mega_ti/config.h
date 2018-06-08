@@ -1,0 +1,3 @@
+#define SERIAL_BAUD_RATE 115200
+#define NUM_OF_INCOMING_BYTES 4
+#define INTERVAL 20 // = 50Hz

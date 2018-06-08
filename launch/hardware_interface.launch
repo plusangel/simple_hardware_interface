@@ -1,0 +1,5 @@
+<launch>
+	<node name="hardware_interface_sonar" pkg="hardware_interface_sonar" type="hardware_interface_sonar" output="screen">
+		<rosparam file="$(find hardware_interface_sonar)/config/arduino_parameters.yaml" command="load" />
+	</node>
+</launch>
