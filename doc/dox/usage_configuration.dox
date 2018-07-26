@@ -1,0 +1,14 @@
+/** 
+\page usage_configuration Configuration
+
+In order to get the proper functionality from the package you should config correctly the parameters.
+Inside the config folder there is a yaml file where you should define:
+
+\code
+port
+baud
+period
+\endcode
+
+of the communication between arduino and linux operating system.
+*/

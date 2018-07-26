@@ -1,7 +1,20 @@
+/**
+ *
+ * @file hardware_interface.cpp
+ *
+ * @brief Implementation of the Hardware Interface for the sonar application
+ *
+ * @author Angelos Plastropoulos
+ * @date 24.07.2018
+ *
+ */
+
 #include "hardware_interface.h"
 
+/**
+ * @detail This is the place where we set-up all the required paramters to allow the interface to work
+ */
 
-// constructor
 hardware_interface_robot_sonar::hardware_interface_robot_sonar() {
   node_name  = ros::this_node::getName();
 
@@ -69,7 +82,7 @@ void hardware_interface_robot_sonar::spin() {
 	
 	std::chrono::time_point<std::chrono::steady_clock> end = std::chrono::steady_clock::now();
 	std::chrono::milliseconds diff = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-	ROS_INFO("ROS iteration duration %llu ms", diff.count());
+	ROS_INFO("ROS iteration duration %lu ms", diff.count());
   }
   
   int16_t v = 0;

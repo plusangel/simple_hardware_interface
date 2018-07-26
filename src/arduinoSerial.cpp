@@ -1,3 +1,14 @@
+/**
+ *
+ * @file arduinoSerial.cpp
+ *
+ * @brief Implementation of the Arduino class
+ *
+ * @author Angelos Plastropoulos
+ * @date 24.07.2018
+ *
+ */
+
 #include "arduinoSerial.h"
 
 Arduino::Arduino(const char *device, const int baud) {
@@ -42,8 +53,6 @@ float Arduino::read_from_mc()
   return encoder;
 }
 
-//-----
-
 void Arduino::send_to_mc(int16_t input)
 {
   //startMarker
@@ -60,8 +69,9 @@ void Arduino::send_to_mc(int16_t input)
   write(fd, outputBuffer, 4);
 }
 
-//-----
-
+/**
+ * @brief It is better to close the serial pert at the end of the app (in the destructor?)
+ */
 void Arduino::close_serial ()
 {
   close (fd) ;

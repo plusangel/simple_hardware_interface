@@ -1,3 +1,14 @@
+/**
+ *
+ * @file stand_alone_spin.h
+ * 
+ * @brief Simple debugging script to test comms wihout ROS overhead
+ *
+ * @author Angelos Plastropoulos
+ * @date 25.07.2018
+ *
+ */
+
 #include "arduinoSerial.h"
 
 int main() {

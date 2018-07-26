@@ -1,0 +1,9 @@
+PROJECT_NAME = "Hardware Interface for sonar"
+OUTPUT_DIRECTORY = ./doc
+INPUT = ./src ./src-tests ./include ./doc/dox ./README.MD
+FILE_PATTERNS = *.cpp *.h *.dox
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+EXTRACT_PRIVATE = YES
+EXTRACT_ALL = YES
+USE_MDFILE_AS_MAINPAGE = ./README.MD

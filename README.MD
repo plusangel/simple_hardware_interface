@@ -2,8 +2,8 @@
 
 ## IOs
 
-It reads input from topic **"sonar_velocity"** to forward it as PWM value (format: Int16)
-It publishes to topic **"encoder"** the encoder ticks (format: Float32)
+It reads input from topic **sonar_velocity** to forward it as PWM value (format: Int16)
+It publishes to topic **encoder** the encoder ticks (format: Float32)
 
 ## Execution
 
@@ -27,6 +27,12 @@ The board is assumed to be found on /dev/ttyACM0. In different case just edit th
 Communication runs at 10Hz (100ms intervals).
 
 For further changes please talk to author.
+
+
+## Documentation
+The project is commented using Doxygen. Please make *doc/create_doc.sh* executable
+(chmod +x create_doc.sh) and run it. After that, index.html inside the doc folder in the home page of the
+documentation site.
 
 ## Athor
 
