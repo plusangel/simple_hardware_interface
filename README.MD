@@ -36,5 +36,5 @@ documentation site.
 
 ## Athor
 
-Angelos Plastropoulos (angelos.plastropoulos@innotecuk.com)
+[Angelos Plastropoulos](mailto:angelos.plastropoulos@gmail.com)
 
